@@ -1,3 +1,4 @@
+
 ;;; universal-launcher.el --- Optimized universal launcher
 
 ;;; Commentary:
@@ -95,7 +96,7 @@
      ((string= ext "py") (all-the-icons-alltheicon "python" :face 'font-lock-keyword-face))
      ((string= ext "rb") (all-the-icons-fileicon "ruby" :face 'font-lock-type-face))
      ((string= ext "java") (all-the-icons-fileicon "java" :face 'font-lock-function-name-face))
-     ((string= ext "c") (all-the-icons-fileicon "c" :face 'font-lock-keyword-face))
+     ((string= ext "c") (all-the-icons-alltheicon "c" :face 'font-lock-keyword-face))
      ((string= ext "cpp") (all-the-icons-fileicon "cpp" :face 'font-lock-keyword-face))
      ((string= ext "h") (all-the-icons-fileicon "h" :face 'font-lock-preprocessor-face))
      ((string= ext "go") (all-the-icons-alltheicon "go" :face 'font-lock-keyword-face))
@@ -542,13 +543,16 @@
   "Search the web with QUERY using default browser."
   (let* ((search-engines
           '(("Google" . "https://www.google.com/search?q=")
+            ("Go documentation" . "https://pkg.go.dev/search?q=")
             ("ArchWiki" . "https://wiki.archlinux.org/index.php?search=")
             ("DuckDuckGo" . "https://duckduckgo.com/?q=")
             ("Marginalia" . "https://search.marginalia.nu/search?query=")
+            ("Reddit" . "https://www.reddit.com/search/?q=")
             ("Wiby" . "https://wiby.me/?q=")
             ("Anna's Archive" . "https://annas-archive.org/search?q=")
             ("Wikipedia" . "https://en.wikipedia.org/w/index.php?search=")
             ("4get" . "https://4get.ca/web?s=")
+            ("Goodreads" . "https://www.goodreads.com/search?q=")
             ("Nix Packages" . "https://search.nixos.org/packages?channel=25.05&show=")
             ("DevDocs.io" . "https://devdocs.io/#q=")
             ("Doom discourse" . "https://discourse.doomemacs.org/search?q=")
